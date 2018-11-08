@@ -4,7 +4,7 @@ Here's list of Swift tips & tricks that I would like to share.
 
 ## Table of contents
 
-[#1 Handle safe area of iPhoneX]
+[#1 Handle safe area of iPhoneX](https://github.com/Jack7a5aGitHub/iOS_SwiftTipsAndUsefulCode#1-Handle-safe-area-of-iPhoneX)<br />
 
 ## [#1 Handle safe area of iPhoneX]()
 
