@@ -5,6 +5,7 @@ Here's list of Swift tips & tricks that I would like to share.
 ## Table of contents
 
 [#1 Handle safe area of iPhoneX](https://github.com/Jack7a5aGitHub/iOS_SwiftTipsAndUsefulCode#1-Handle-safe-area-of-iPhoneX)<br />
+[#2 Handle Tab Bar Indicator](https://github.com/Jack7a5aGitHub/iOS_SwiftTipsAndUsefulCode#2-Handle-Tab-Bar-Indicator)<br />
 
 ## [#1 Handle safe area of iPhoneX]()
 
@@ -38,4 +39,25 @@ extension UIScreen {
         }  
     }
 }
+```
+## [#2 Handle Tab Bar Indicator]()
+
+Add Indicator to Tab bar.
+
+```swift
+extension UIImage {
+    func createSelectionIndicator(color: UIColor, size: CGSize, lineWidth: CGFloat) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        color.setFill()
+        UIRectFill(CGRect(x: 0, y: size.height - lineWidth, width: size.width, height: lineWidth))
+        guard let image = UIGraphicsGetImageFromCurrentImageContext() else {
+            return UIImage()
+        }
+        UIGraphicsEndImageContext()
+        return image
+    }
+}
+
+// Usage 
+        self.tabBar.selectionIndicatorImage = UIImage().createSelectionIndicator(color: #colorLiteral(red: 0.07843137255, green: 0.4901960784, blue: 0.7529411765, alpha: 1), size: CGSize(width: tabBar.frame.width / CGFloat(tabBar.items.count), height: tabBar.frame.height), lineWidth: 2.0)
 ```
