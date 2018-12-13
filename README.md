@@ -7,6 +7,7 @@ Here's list of Swift tips & tricks that I would like to share.
 [#1 Handle safe area of iPhoneX](https://github.com/Jack7a5aGitHub/iOS_SwiftTipsAndUsefulCode#1-Handle-safe-area-of-iPhoneX)<br />
 [#2 Handle Tab Bar Indicator](https://github.com/Jack7a5aGitHub/iOS_SwiftTipsAndUsefulCode#2-Handle-Tab-Bar-Indicator)<br />
 [#3 Collection Scroll](https://github.com/Jack7a5aGitHub/iOS_SwiftTipsAndUsefulCode#3-Collection-Scroll)<br />
+[#4 Responsive TextField](https://github.com/Jack7a5aGitHub/iOS_SwiftTipsAndUsefulCode#4-Responsive-TextField)<br />
 ## [#1 Handle safe area of iPhoneX]()
 
 UIScreen Extension to calculate the height of safe area or width of safe area.
@@ -85,4 +86,16 @@ To determine cell after scrolling
             return
         }
     }
+```
+
+## [#4 Responsive TextField]()
+
+Update TextField Status
+
+```swift
+textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+
+@objc func textFieldDidChange(_ textField: UITextField) {
+
+}
 ```
